@@ -1,10 +1,12 @@
 import React from 'react';
 
 function App() {
-  let numbers = [1, 2, 3];
+  // let numbers = [1, 2, 3];
+  const [numbers, setNumbers] = React.useState([1, 2, 3]);
 
   const addNumber = () => {
-    numbers.push(4);
+    const randNumber = Math.round(Math.random() * 10);
+    setNumbers([...numbers, randNumber]); //Очистить массив по клику
   };
 
   return (
